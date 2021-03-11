@@ -10,15 +10,19 @@ class Bubbly < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_darwin_amd64.tar.gz"
-    sha256 "cac9448dfbd4a560881535811c5ccbee268201181ec0ffcec6bf283e0bedd312"
+    sha256 "051d071af11518d063efbb391af26349fcb97978a97638101b69a1c48b3e4453"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_darwin_arm64.tar.gz"
+    sha256 "de29b486290b115466ae6b675de84380c69ced7eef5f20bf049023baf9ad1770"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_linux_amd64.tar.gz"
-    sha256 "3e4ebf10db6f5ec5bcb747b2c15f1f388f928f89c7afdcc46b7e1363be56f435"
+    sha256 "f4cabb4eedec7d45222c002387502a034cb03ace3affafb7327b938870d016e5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_linux_arm64.tar.gz"
-    sha256 "1e19f19b19cf180d22b1d317d6b39e14be15ae8072e3b9caa1d18fcf976f2a98"
+    sha256 "a602d7cc0e1f5364f807fcccf9b3af9b503831a9a28d91ccae6c4f85d2eb4839"
   end
 
   depends_on "go"
