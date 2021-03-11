@@ -10,15 +10,15 @@ class Bubbly < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_darwin_amd64.tar.gz"
-    sha256 "7d15c84cace42ab3dda25862f2d6ebb614415797109addb4d79ca1d4d3cd9d14"
+    sha256 "cac9448dfbd4a560881535811c5ccbee268201181ec0ffcec6bf283e0bedd312"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_linux_amd64.tar.gz"
-    sha256 "27ab4b9f24f6594e1c87de07ed4713a5f44dfe4d344bc09b0325f5b24db0bca0"
+    sha256 "3e4ebf10db6f5ec5bcb747b2c15f1f388f928f89c7afdcc46b7e1363be56f435"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_linux_arm64.tar.gz"
-    sha256 "5e16a26f57d4d23062ffcfa3ddda25111a3b5d272771ce88e5a14880b4519237"
+    sha256 "1e19f19b19cf180d22b1d317d6b39e14be15ae8072e3b9caa1d18fcf976f2a98"
   end
 
   depends_on "go"
