@@ -5,24 +5,24 @@
 class Bubbly < Formula
   desc "Bubbly CLI"
   homepage "https://bubbly.dev/"
-  version "0.0.1-alpha.1"
+  version "0.0.1-alpha.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.1/bubbly_0.0.1-alpha.1_darwin_amd64.tar.gz"
-    sha256 "0b6bfd34c30f2fd986b775d54d0e89962367c0f6033a7e218133912437e1143e"
+    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_darwin_amd64.tar.gz"
+    sha256 "d7cbab8ed22d4378c7c40d4b894e550f1854b85cb6d2f504e689c34ac2d66718"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.1/bubbly_0.0.1-alpha.1_darwin_arm64.tar.gz"
-    sha256 "5101ecf83ee157571d7599976a0e9c831a508b9c9fb45df23d5c3a738481ea09"
+    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_darwin_arm64.tar.gz"
+    sha256 "ba9cc3f894c9767da47089c904f61164193d2f1d40deea9fb81465bd3cd3c1be"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.1/bubbly_0.0.1-alpha.1_linux_amd64.tar.gz"
-    sha256 "52882aeb0fc3a6ef8d23f4be080c9c58a71278e867a06e73c7d3cc6c43fa4c93"
+    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_linux_amd64.tar.gz"
+    sha256 "dbb09dd1716b4134890b628677cf575472b161070860fe72e9e7a176263c705d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.1/bubbly_0.0.1-alpha.1_linux_arm64.tar.gz"
-    sha256 "f5fb3307782789908e109e85137c587263b3588da46ad72d2a486f8cebbf3517"
+    url "https://github.com/verifa/bubbly/releases/download/v0.0.1-alpha.2/bubbly_0.0.1-alpha.2_linux_arm64.tar.gz"
+    sha256 "18f27bf2fc31d25fd0cf4807feeac71a66fa997f544b21271f67091a66f9f5de"
   end
 
   depends_on "go"
