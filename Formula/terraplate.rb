@@ -5,20 +5,20 @@
 class Terraplate < Formula
   desc "Terraplate"
   homepage "https://github.com/verifa/terraplate"
-  version "0.1.9-alpha"
+  version "0.2.0-alpha"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/verifa/terraplate/releases/download/0.1.9-alpha/terraplate_0.1.9-alpha_darwin_amd64.tar.gz"
-      sha256 "b2c93f9195adc3bf0c0e139ccf3e7196d304830a8ee10928b5b9251600034335"
+    if Hardware::CPU.arm?
+      url "https://github.com/verifa/terraplate/releases/download/0.2.0-alpha/terraplate_0.2.0-alpha_darwin_arm64.tar.gz"
+      sha256 "e6be50a6106734df190002eb1119cb113a385a0d8a920111805b576aa74290cc"
 
       def install
         bin.install "terraplate"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/verifa/terraplate/releases/download/0.1.9-alpha/terraplate_0.1.9-alpha_darwin_arm64.tar.gz"
-      sha256 "7dd0d2a16bf5ef29bce24a4e038f1146576593553355d9abdac4b17fc4a9fdb5"
+    if Hardware::CPU.intel?
+      url "https://github.com/verifa/terraplate/releases/download/0.2.0-alpha/terraplate_0.2.0-alpha_darwin_amd64.tar.gz"
+      sha256 "8195ffe5750983bc175606e237703846a30793828558c4f5d12cfd9c62d3f791"
 
       def install
         bin.install "terraplate"
@@ -27,17 +27,17 @@ class Terraplate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/verifa/terraplate/releases/download/0.1.9-alpha/terraplate_0.1.9-alpha_linux_arm64.tar.gz"
-      sha256 "a13a523f5980855a8bbea3e7ad0ddf42ffc1d8bae98965f624b185fc1e070623"
+    if Hardware::CPU.intel?
+      url "https://github.com/verifa/terraplate/releases/download/0.2.0-alpha/terraplate_0.2.0-alpha_linux_amd64.tar.gz"
+      sha256 "f121e9ae75865475cc419a7bc4d821eebb0d0f788cb5a26bd246cdd614185733"
 
       def install
         bin.install "terraplate"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/verifa/terraplate/releases/download/0.1.9-alpha/terraplate_0.1.9-alpha_linux_amd64.tar.gz"
-      sha256 "8ed6fd23d1c7bb63a58e06fb8d0b507a2e0ccc15e054aba281cb46b8504e9ede"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/verifa/terraplate/releases/download/0.2.0-alpha/terraplate_0.2.0-alpha_linux_arm64.tar.gz"
+      sha256 "d24bd8fcb074c799cb979a7fed190c108c3333daa30d1523e54db69662c5c600"
 
       def install
         bin.install "terraplate"
