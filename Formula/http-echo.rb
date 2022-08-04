@@ -5,20 +5,20 @@
 class HttpEcho < Formula
   desc "http-echo"
   homepage "https://github.com/verifa/http-echo"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/verifa/http-echo/releases/download/0.3.0/http-echo_0.3.0_darwin_arm64.tar.gz"
-      sha256 "253255024bef05f616cd3fbd6f810c55ad0e62a7524d83430782419cfae4199e"
+    if Hardware::CPU.intel?
+      url "https://github.com/verifa/http-echo/releases/download/0.3.1/http-echo_0.3.1_darwin_amd64.tar.gz"
+      sha256 "5cf48cef8bed416f3982b0c32b09d790848f9f3b7d325c92e6fdf3bde945268f"
 
       def install
         bin.install "http-echo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/verifa/http-echo/releases/download/0.3.0/http-echo_0.3.0_darwin_amd64.tar.gz"
-      sha256 "9fd78231dd419bd28084ca6cdd96e6ba598ce45226b6d2a7755f42603d27bdd3"
+    if Hardware::CPU.arm?
+      url "https://github.com/verifa/http-echo/releases/download/0.3.1/http-echo_0.3.1_darwin_arm64.tar.gz"
+      sha256 "a7ed968deb8378af807768b6935702a6524485958044cf8559c9195b99d77a86"
 
       def install
         bin.install "http-echo"
@@ -28,16 +28,16 @@ class HttpEcho < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/verifa/http-echo/releases/download/0.3.0/http-echo_0.3.0_linux_arm64.tar.gz"
-      sha256 "89ab9b06efc810c0625849618afa516d656a2de05a15b14c770127a00a4b4d65"
+      url "https://github.com/verifa/http-echo/releases/download/0.3.1/http-echo_0.3.1_linux_arm64.tar.gz"
+      sha256 "a3051c01fb8e924001b1d2c50d553dafa7c172fd9999fb3e743ec275313e6b54"
 
       def install
         bin.install "http-echo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/verifa/http-echo/releases/download/0.3.0/http-echo_0.3.0_linux_amd64.tar.gz"
-      sha256 "b05bc458e5b99eeb7f5019a581c581585c1f10429250c587b0eaa74b31e8a547"
+      url "https://github.com/verifa/http-echo/releases/download/0.3.1/http-echo_0.3.1_linux_amd64.tar.gz"
+      sha256 "aee003a656605ff75c2de5234cea2178ac111f923dae66def71c878d0b167895"
 
       def install
         bin.install "http-echo"
