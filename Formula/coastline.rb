@@ -5,20 +5,20 @@
 class Coastline < Formula
   desc "Terraplate"
   homepage "https://github.com/verifa/coastline"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.6/coastline_0.0.6_darwin_arm64.tar.gz"
-      sha256 "9a0418b2f9226ffab0ba6eb4520e79ebfb457b9a1074fcbfc0dc509999f4c346"
+      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_darwin_arm64.tar.gz"
+      sha256 "692bef1594ab0134b6cc5c812ab6e2116ba32ce86de680da724f03386cee39c7"
 
       def install
         bin.install "coastline"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.6/coastline_0.0.6_darwin_amd64.tar.gz"
-      sha256 "d535dbf55e59b65491e78f1f4d7f57500fe5a95b959f841433c26f8368e10b2b"
+      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_darwin_amd64.tar.gz"
+      sha256 "5d427f206b8200ec59ae44257d0863c528dcdfaa5c7c10dbf1447e6406cbc0bb"
 
       def install
         bin.install "coastline"
@@ -27,17 +27,17 @@ class Coastline < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.6/coastline_0.0.6_linux_amd64.tar.gz"
-      sha256 "bb20535b256826e9aef5ab03cdae5029071325d4b8dc81b96f2fa2467952cfd4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_linux_arm64.tar.gz"
+      sha256 "1564addf45572bc03a877b0268b2098431d1fb640b6fc942a2e3fb73f029cef9"
 
       def install
         bin.install "coastline"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.6/coastline_0.0.6_linux_arm64.tar.gz"
-      sha256 "2ec5f11a16d8be5c5a1d428fec1205732a76abd29889a2d120f301efd51493e6"
+    if Hardware::CPU.intel?
+      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_linux_amd64.tar.gz"
+      sha256 "5660eb67ce12bd8c7f319fd086bb3d62d9e79e3c583ac000b5bc9e59928ea437"
 
       def install
         bin.install "coastline"
