@@ -5,20 +5,20 @@
 class RtRetention < Formula
   desc "Artifactory Retention"
   homepage "https://github.com/verifa/rt-retention"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/verifa/rt-retention/releases/download/v0.0.3/rt-retention_0.0.3_darwin_amd64.tar.gz"
-      sha256 "8c17718bd8e0415ab1b7354e09ee7d9fbdb606355d77e98598ada15ccdd1c88a"
+    if Hardware::CPU.arm?
+      url "https://github.com/verifa/rt-retention/releases/download/v0.0.4/rt-retention_0.0.4_darwin_arm64.tar.gz"
+      sha256 "ab2bc03071330f73b93037f76436353f7ae5463a10de276376ec33c90dc2da2f"
 
       def install
         bin.install "rt-retention"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/verifa/rt-retention/releases/download/v0.0.3/rt-retention_0.0.3_darwin_arm64.tar.gz"
-      sha256 "81a87740e3a85563297230a34b2052426fa03519eefbe7390671a885255b36b3"
+    if Hardware::CPU.intel?
+      url "https://github.com/verifa/rt-retention/releases/download/v0.0.4/rt-retention_0.0.4_darwin_amd64.tar.gz"
+      sha256 "570dab50311ac08dc0ea356babe3212334bec657c9bb2bb4f03fb3db4d112935"
 
       def install
         bin.install "rt-retention"
@@ -27,17 +27,17 @@ class RtRetention < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/verifa/rt-retention/releases/download/v0.0.3/rt-retention_0.0.3_linux_arm64.tar.gz"
-      sha256 "9e6285530f999da0b7fbdeb7b6dfdf421f66ea62c6d5fa48064d22ccdab1fbc9"
+    if Hardware::CPU.intel?
+      url "https://github.com/verifa/rt-retention/releases/download/v0.0.4/rt-retention_0.0.4_linux_amd64.tar.gz"
+      sha256 "a46cf76d77bb88b5c58fde5019a999369e1cbf497a897ab51de38da6424dc542"
 
       def install
         bin.install "rt-retention"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/verifa/rt-retention/releases/download/v0.0.3/rt-retention_0.0.3_linux_amd64.tar.gz"
-      sha256 "dba6ca381ad81370c14e8c1c00daa0b35285a4f98c0c9dbcd0a4ced7b55b41ff"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/verifa/rt-retention/releases/download/v0.0.4/rt-retention_0.0.4_linux_arm64.tar.gz"
+      sha256 "19710ed77590712aa007e56867b21b9bc2ca246bb5fd7a88e6f6f606fe2ff05e"
 
       def install
         bin.install "rt-retention"
