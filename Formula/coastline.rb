@@ -5,20 +5,20 @@
 class Coastline < Formula
   desc "Terraplate"
   homepage "https://github.com/verifa/coastline"
-  version "0.0.7"
+  version "0.0.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_darwin_arm64.tar.gz"
-      sha256 "692bef1594ab0134b6cc5c812ab6e2116ba32ce86de680da724f03386cee39c7"
+      url "https://github.com/verifa/coastline/releases/download/v0.0.9/coastline_0.0.9_darwin_arm64.tar.gz"
+      sha256 "cb246682040acb357b6ecf061dd5b63d5dd2b714f31effea278b01f4bc85e708"
 
       def install
         bin.install "coastline"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_darwin_amd64.tar.gz"
-      sha256 "5d427f206b8200ec59ae44257d0863c528dcdfaa5c7c10dbf1447e6406cbc0bb"
+      url "https://github.com/verifa/coastline/releases/download/v0.0.9/coastline_0.0.9_darwin_amd64.tar.gz"
+      sha256 "6cb5a486eb71f2f9ec8956419fe6e2f7dc0c4d437d8a8a013b405644232adb67"
 
       def install
         bin.install "coastline"
@@ -28,16 +28,16 @@ class Coastline < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_linux_arm64.tar.gz"
-      sha256 "1564addf45572bc03a877b0268b2098431d1fb640b6fc942a2e3fb73f029cef9"
+      url "https://github.com/verifa/coastline/releases/download/v0.0.9/coastline_0.0.9_linux_arm64.tar.gz"
+      sha256 "f20a7bd7b14b69f1b6726f368e0afa8f019c612286aa8f69421759f936ead276"
 
       def install
         bin.install "coastline"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/verifa/coastline/releases/download/v0.0.7/coastline_0.0.7_linux_amd64.tar.gz"
-      sha256 "5660eb67ce12bd8c7f319fd086bb3d62d9e79e3c583ac000b5bc9e59928ea437"
+      url "https://github.com/verifa/coastline/releases/download/v0.0.9/coastline_0.0.9_linux_amd64.tar.gz"
+      sha256 "2584922c463c90b444821cbe7bc7df3eb6c4b2bc77ce3d7bbcbe7476fc028eb2"
 
       def install
         bin.install "coastline"
