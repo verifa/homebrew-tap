@@ -5,20 +5,20 @@
 class Terraplate < Formula
   desc "Terraplate"
   homepage "https://github.com/verifa/terraplate"
-  version "0.3.3"
+  version "0.3.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/verifa/terraplate/releases/download/0.3.3/terraplate_0.3.3_darwin_amd64.tar.gz"
-      sha256 "f693f5e26c4ecbbd7681dca07035bc3a5b1453a87163c31c33d16bd9020d9a10"
+      url "https://github.com/verifa/terraplate/releases/download/0.3.4/terraplate_0.3.4_darwin_amd64.tar.gz"
+      sha256 "c53e706c32facbf3338b6a65fccdf76fcc235c358118effd5f8cfb9b4f6a5fc5"
 
       def install
         bin.install "terraplate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/verifa/terraplate/releases/download/0.3.3/terraplate_0.3.3_darwin_arm64.tar.gz"
-      sha256 "7323ba66c5d683904edff8eb1e0fdd31e0e460aeb4098c3e9eae583806ea18ae"
+      url "https://github.com/verifa/terraplate/releases/download/0.3.4/terraplate_0.3.4_darwin_arm64.tar.gz"
+      sha256 "35c3850db15c5f03714c3e9c4b85dbfb054e91f29936f0eb47d5587503bc1b2b"
 
       def install
         bin.install "terraplate"
@@ -28,16 +28,16 @@ class Terraplate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/verifa/terraplate/releases/download/0.3.3/terraplate_0.3.3_linux_arm64.tar.gz"
-      sha256 "3208ed954714d9a967b7528ef5f2be02fa80831a25953c186a23662d28ed8175"
+      url "https://github.com/verifa/terraplate/releases/download/0.3.4/terraplate_0.3.4_linux_arm64.tar.gz"
+      sha256 "f745e4e93c2a2f448e0b52e250d75040a2d4f0c3ce4479cac195a1ee7a531e8b"
 
       def install
         bin.install "terraplate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/verifa/terraplate/releases/download/0.3.3/terraplate_0.3.3_linux_amd64.tar.gz"
-      sha256 "4bbc53548c69b495b3d6db3147378b60ee23b8fd3c3bb49d5236ea6ba7ff3eb4"
+      url "https://github.com/verifa/terraplate/releases/download/0.3.4/terraplate_0.3.4_linux_amd64.tar.gz"
+      sha256 "056e0954432c8f515271233a8ec252bb5be37423dafa0002ffb6e9a54938f246"
 
       def install
         bin.install "terraplate"
